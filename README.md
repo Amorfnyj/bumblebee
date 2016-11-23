@@ -1,4 +1,4 @@
-# angular2-registration-login-example
+# angular2-bumblebee
 
 Angular 2 Web-App
 
