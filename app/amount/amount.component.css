@@ -1,0 +1,20 @@
+h1 {
+    font-family: "Comic Sans MS", cursive, bold, sans-serif;
+}
+
+.panel-body {
+    font-family: "Comic Sans MS", cursive, bold, sans-serif;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.text_form {
+    width: 30px;
+}
+
+.right_text_field {
+    float: right;
+    margin-bottom: 20px;
+}

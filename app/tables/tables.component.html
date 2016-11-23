@@ -1,0 +1,21 @@
+<div class="container">
+
+        <h1 align="center" *ngIf="currentUser != null">Hi {{currentUser.firstName}}!</h1>
+
+        <div class="span1 text-center">
+            <h3 >Wyberz Datę</h3>
+            <p-calendar class="calendar" [(ngModel)]="value" [showIcon]="true"></p-calendar>
+        </div>
+
+
+            <div class="span2 col-md-4" *ngFor="let table of tableArray">
+                <a [routerLink]="['/table']">
+                    <h1 align="center">Stolik №{{table.number}}</h1>
+                    <div class="table-image"></div>
+                    <h3 align="center" >{{table.getOrdersNumber()}}</h3>
+                </a>
+            </div>
+
+
+
+    </div>

@@ -1,0 +1,41 @@
+<div class="component">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Podsumowanie</h1>
+            <p-dataTable class="col-md-12" [value]="order"  scrollable="true" scrollHeight="250px" selectionMode="single" [(selection)]="selectedRestaurant" (onRowSelect)="onRowSelect(selectedRestaurant)">
+                <p-column field="restaurantName" header="Nazwa"></p-column>
+                <p-column field="cost" header="Suma"></p-column>
+                <p-column field="numberOfGuests" header="Liczba osób"></p-column>
+            </p-dataTable>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <div class="col-xs-8">
+                <label for="usr">Imie i Nazwisko:</label>
+                <input type="text" class="form-control" id="usr">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="col-xs-8 right_text_field">
+                <label for="tel">Numer telefonu:</label>
+                <input type="text" class="form-control" id="tel">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="panel panel-default">
+                <div class="panel-body">Pracownik skontaktuje się z Panem w ciągu 10 minut, aby podtwierdzić zamówienie.</div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center button_group">
+            <div class="btn-group btn-group-justified">
+                <a [routerLink]="['/restaurant_choice']" class="btn btn-danger">Anuluj</a>
+                <a [routerLink]="['/login']"  class="btn btn-success">Złóż zamówienie</a>
+            </div>
+        </div>
+    </div>
+</div>

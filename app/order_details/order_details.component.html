@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <h1 align="center">{{ restaurant.name }}</h1>
+        <div class="col-md-6 text-center" >
+            <h3>Wybierz datę i czas:</h3>
+            <p-calendar [(ngModel)]="value" [showTime]="true" [showIcon]="true"></p-calendar>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <h3>Liczba osób:</h3>
+            <div class="input-group spinner">
+                <input type="text" class="form-control" value="{{ numberOfPeople }}" #inumberOfPeople>
+                <div class="input-group-btn-vertical">
+                    <button class="btn btn-default" type="button" (click)="upButton(inumberOfPeople.value); inumberOfPeople.value = numberOfPeople"><i class="fa fa-caret-up"></i></button>
+                    <button class="btn btn-default" type="button" (click)="downButton(inumberOfPeople.value); inumberOfPeople.value = numberOfPeople"><i class="fa fa-caret-down"></i></button>
+                </div>
+            </div>
+            <p class="help-block">Min 0 - Max 10.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p-pickList [source]="orderArticles" [target]="choosenArticles" [showSourceControls]="false" [showTargetControls]="false" sourceHeader="Menu:" targetHeader="Zamówienie" [responsive]="true" [sourceStyle]="{'height':'300px'}" [targetStyle]="{'height':'300px'}">
+                <template let-order>
+                    <div class="ui-helper-clearfix">
+                        <div class="list_style">{{order.name}} - {{order.price}}zł</div>
+    </div>
+                </template>
+            </p-pickList>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center button_group">
+            <div class="btn-group btn-group-justified">
+                <a [routerLink]="['/restaurant_choice']" class="btn btn-danger">Anuluj</a>
+                <a [routerLink]="['/amount']"  class="btn btn-success">Dalej</a>
+            </div>
+        </div>
+    </div>
+
+</div>

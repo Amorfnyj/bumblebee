@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <p-dataTable class="col-md-6" [value]="orders"  scrollable="true" scrollHeight="600px" selectionMode="single" data-toggle="collapse" data-target="#demo" [(selection)]="selectedOrder" (onRowSelect)="onRowSelect(selectedOrder)">
+            <p-column field="name" header="Imie"></p-column>
+            <p-column field="numberOfGuests" header="Liczba osob"></p-column>
+            <p-column field="date" header="Data"></p-column>
+        </p-dataTable>
+
+
+        <div class="col-md-4 " *ngIf="name != null">
+            <h1 align="justify">{{ name }}</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">Zamówienie:</div>
+                <div class="panel-body">
+                    <ul href="#" class="list-group" >
+                        <li class="list-group-item" *ngFor="let order of orderArticles">{{order}}</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+                <div class="col-md-12 text-center">
+                    <div class="btn-group ">
+                        <button  class="button" class="btn btn-primary">Zrealizowane</button>
+                        <button class="button" class="btn btn-primary">Orzuć</button>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+</div>

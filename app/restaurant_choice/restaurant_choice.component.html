@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 align="center">Proszę wybrać restaurację!</h1>
+    <p-dataTable class="col-md-12" [value]="restaurantArray"  scrollable="true" scrollHeight="250px" selectionMode="single" [(selection)]="selectedRestaurant" (onRowSelect)="onRowSelect(selectedRestaurant)">
+        <p-column field="name" header="Nazwa"></p-column>
+        <p-column field="adres" header="Adres"></p-column>
+        <p-column field="freePlaces" header="Liczba wolnych miejsc"></p-column>
+    </p-dataTable>
+
+    <div class="col-md-12 promotions-table">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center"><h3>Dzisiaj w promocji!</h3></div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">1. Przy zamówieniu dwóch kubków z kołą trzeci za darmo!</li>
+                    <li class="list-group-item">2. Przy zamówienu powyżej 30 zł druga pizza gratis!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 text-center">
+        <button type="button" class="btn btn-danger" data-toggle="tooltip" title="Wybierz jedna z listy!" *ngIf="!rowToggled">Żadna resturacja nie została wybrana</button>
+        <button type="button" class="btn btn-success" *ngIf="rowToggled" (click)="onRestaurantChoosed()" [routerLink]="['/order_details']">Dalej</button>
+    </div>
+
+</div>
