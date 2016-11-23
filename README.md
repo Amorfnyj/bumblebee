@@ -2,7 +2,7 @@
 
 Angular 2 Web-App
 
-Aplikacja realizująca on-line rezerwację miejs w wymyślonej restauracji "Długi Trzmiel".
+Aplikacja realizująca on-line rezerwację miejsc w wymyślonej restauracji "Długi Trzmiel".
 
 Instalacja:
 
