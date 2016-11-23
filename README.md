@@ -1,5 +1,7 @@
 # angular2-bumblebee
 
+![alt tag](https://raw.githubusercontent.com/Amorfnyj/bumblebee/master/app/trzmiel-login.png)
+
 Angular 2 Web-App
 
 Aplikacja realizująca on-line rezerwację miejsc w wymyślonej restauracji "Długi Trzmiel".
